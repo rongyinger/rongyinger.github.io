@@ -1,0 +1,639 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenClaw｜案例拆解</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">容莹<span>｜AI 产品经理作品集</span></a>
+      <nav class="nav-links" aria-label="案例导航">
+        <a href="index.html#cases">案例</a>
+        <a href="#workflow">工作流</a>
+        <a href="#prd">PRD</a>
+        <a href="#prompt">Prompt</a>
+        <a href="#prototype">原型</a>
+        <a href="#acceptance">验收</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <div class="wrap">
+        <a class="back" href="index.html">← 返回首页</a>
+        <div class="eyebrow">Case 01 / WeCom AI Workspace</div>
+        <h1>OpenClaw 接入企微 AI 工作区：招聘数字人 + 合同审查数字人</h1>
+        <p class="lead">围绕企微 AI 工作区中的招聘与合同审查场景，接入多 Agent 协作流程，将原本分散的人工处理链路转化为“AI 分析 + 人工复核”的结构化工作流。</p>
+        <div class="metric-strip reveal">
+          <div class="metric">
+            <strong>5 → 2</strong>
+            <span>招聘流程人工确认步骤简化</span>
+          </div>
+          <div class="metric">
+            <strong>40+</strong>
+            <span>合同条款差异识别覆盖</span>
+          </div>
+          <div class="metric">
+            <strong>多 Agent</strong>
+            <span>招聘与合同审查场景接入协作流程</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap detail-grid">
+        <article class="panel reveal">
+          <h3>项目背景</h3>
+          <p>该项目面向企微 AI 工作区场景，聚焦两个高频任务：招聘数字人和合同审查数字人。目标是把原本依赖人工阅读、人工判断、人工确认的流程，转化为 AI 辅助分析 + 人工复核的工作方式，提高处理效率，并让输出结果更结构化、更易于确认和沉淀。</p>
+        </article>
+        <article class="panel reveal">
+          <h3>我的角色</h3>
+          <ul class="list">
+            <li>需求拆解</li>
+            <li>业务流程梳理</li>
+            <li>Agent Workflow 设计</li>
+            <li>PRD 文档整理</li>
+            <li>Prompt 设计</li>
+            <li>Figma 原型设计 / 原型说明</li>
+            <li>输出字段设计</li>
+            <li>测试用例 / 验收标准设计</li>
+            <li>与开发沟通落地</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Contribution</div>
+            <h2 class="section-title">我具体做了什么</h2>
+          </div>
+        </div>
+        <div class="rule-grid">
+          <div class="mini reveal"><strong>招聘场景拆解</strong><span>将招聘场景拆解为岗位需求输入、候选人信息解析、匹配评分、结果解释、人工确认等关键节点。</span></div>
+          <div class="mini reveal"><strong>合同场景拆解</strong><span>将合同审查场景拆解为合同上传、差异识别、风险判断、结果解释、人工复核和结果导出等节点。</span></div>
+          <div class="mini reveal"><strong>多 Agent 协作流程</strong><span>设计多 Agent 协作流程，将任务接收、文档解析、分析判断、结果解释、人工复核串成结构化工作流。</span></div>
+          <div class="mini reveal"><strong>招聘输出结构</strong><span>设计候选人匹配分、匹配理由、亮点、风险提示和推荐结论等输出字段。</span></div>
+          <div class="mini reveal"><strong>合同输出结构</strong><span>设计差异条款、差异类型、风险等级、风险说明、修改建议和原文定位等输出字段。</span></div>
+          <div class="mini reveal"><strong>产出物沉淀</strong><span>梳理 PRD、Prompt、原型页面和验收标准，让项目不仅能跑流程，也能沉淀为可复用的产品方案。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recruit-demo-video">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Demo Video</div>
+            <h2 class="section-title">招聘数字人演示视频</h2>
+            <p class="section-note">该演示视频展示了招聘数字人从 HR 的一句自然语言需求出发，逐步完成岗位需求澄清、JD 生成、招聘平台筛选、候选人匹配评分、邀约跟进和面试时间协调的完整流程。视频内容用于作品集展示，涉及的候选人信息和账号信息已按演示场景脱敏处理。</p>
+          </div>
+        </div>
+        <div class="video-demo-grid">
+          <article class="video-card reveal">
+            <video class="case-video" controls preload="metadata" poster="assets/openclaw/recruit-demo-cover.png">
+              <source src="assets/openclaw/recruit-demo.mp4" type="video/mp4">
+              当前浏览器不支持视频播放。
+            </video>
+          </article>
+          <aside class="video-insight-card reveal">
+            <h3>视频重点看什么</h3>
+            <ul class="list">
+              <li><strong>需求澄清：</strong>机器人先追问岗位名称、薪资、技术栈、到岗时间等关键条件；</li>
+              <li><strong>JD 生成：</strong>将 HR 的自然语言需求整理成可发布的岗位说明；</li>
+              <li><strong>简历筛选：</strong>根据招聘平台和筛选标准搜索候选人；</li>
+              <li><strong>匹配评分：</strong>输出候选人清单、匹配亮点和匹配分；</li>
+              <li><strong>邀约跟进：</strong>继续推进候选人邀约、面试时间协调和下一步提醒。</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recruit-demo-screenshots">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Demo Screenshots</div>
+            <h2 class="section-title">真实演示流程截图</h2>
+            <p class="section-note">以下截图来自招聘数字人在企微 AI 工作区中的演示流程，用于展示真实交互链路。截图内容已按作品集展示场景脱敏处理。</p>
+          </div>
+        </div>
+        <div class="demo-gallery">
+          <article class="demo-card reveal">
+            <img src="assets/openclaw/recruit-01-intro.png" alt="招聘机器人能力说明截图">
+            <div class="demo-card-body">
+              <h3>招聘机器人能力说明</h3>
+              <p>机器人先明确自身能力边界，覆盖需求梳理、JD 产出、简历筛选、邀约跟进和数据复盘。</p>
+            </div>
+          </article>
+          <article class="demo-card reveal">
+            <img src="assets/openclaw/recruit-02-clarify.png" alt="岗位需求澄清截图">
+            <div class="demo-card-body">
+              <h3>岗位需求澄清</h3>
+              <p>HR 输入招聘需求后，机器人继续追问岗位名称、薪资范围、技术栈、金融经验、值班要求等关键条件。</p>
+            </div>
+          </article>
+          <article class="demo-card reveal">
+            <img src="assets/openclaw/recruit-03-jd.png" alt="JD 生成与确认截图">
+            <div class="demo-card-body">
+              <h3>JD 生成与确认</h3>
+              <p>机器人将补充信息整理成岗位职责、任职要求、薪资福利和岗位信息，并在确认后进入简历筛选阶段。</p>
+            </div>
+          </article>
+          <article class="demo-card reveal">
+            <img src="assets/openclaw/recruit-04-candidates.png" alt="简历筛选与匹配评分截图">
+            <div class="demo-card-body">
+              <h3>简历筛选与匹配评分</h3>
+              <p>机器人对接招聘平台，按筛选标准搜索 127 份简历，并输出匹配度 ≥ 70 分的候选人清单。</p>
+            </div>
+          </article>
+          <article class="demo-card reveal">
+            <img src="assets/openclaw/recruit-05-followup.png" alt="邀约跟进与下一步提醒截图">
+            <div class="demo-card-body">
+              <h3>邀约跟进与下一步提醒</h3>
+              <p>机器人继续跟进候选人邀约状态，协助确认面试时间，并输出已完成事项和后续提醒。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Users & Scenarios</div>
+            <h2 class="section-title">用户与使用场景</h2>
+          </div>
+        </div>
+        <div class="split-grid">
+          <article class="panel reveal">
+            <h3>招聘数字人</h3>
+            <ul class="list">
+              <li><strong>目标用户：</strong>HR</li>
+              <li><strong>输入：</strong>HR 对招聘人的需求 / 岗位要求</li>
+              <li><strong>输出：</strong>候选人匹配分、匹配理由、风险提示、推荐结论</li>
+            </ul>
+          </article>
+          <article class="panel reveal">
+            <h3>合同审查数字人</h3>
+            <ul class="list">
+              <li><strong>目标用户：</strong>合同审核人员</li>
+              <li><strong>输入：</strong>我方发给对方公司的合同 + 对方签字返回的合同版本</li>
+              <li><strong>输出：</strong>差异识别结果、风险分级、重大权益变化提示、修改建议</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Problem</div>
+            <h2 class="section-title">核心问题</h2>
+          </div>
+        </div>
+        <div class="rule-grid">
+          <div class="mini reveal"><strong>流程分散</strong><span>招聘与合同审查任务分散在企微、文档、表格和人工沟通中，处理链路长。</span></div>
+          <div class="mini reveal"><strong>人工依赖高</strong><span>简历筛选、合同比对、风险判断高度依赖人工阅读，耗时且容易遗漏。</span></div>
+          <div class="mini reveal"><strong>输出不统一</strong><span>AI 输出如果没有统一字段和解释结构，HR / 合同审核人员难以快速确认。</span></div>
+          <div class="mini reveal"><strong>复核成本高</strong><span>AI 给出结果后，人工仍然需要反复核对，缺少清晰的确认入口和风险分级。</span></div>
+          <div class="mini reveal"><strong>难以沉淀</strong><span>如果没有标准化的流程、字段和页面结构，项目难以复用和扩展。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Solution</div>
+            <h2 class="section-title">产品方案</h2>
+            <p class="section-note">该方案不是简单把模型接入工作区，而是将任务拆分为多个可协作的 Agent 节点，并通过统一输入、结构化输出和人工复核机制，把模型能力纳入可控流程。项目中实际使用了多 Agent 协作流程，而不是停留在概念方案。</p>
+          </div>
+        </div>
+        <div class="output-grid">
+          <div class="output reveal">任务接收 Agent</div>
+          <div class="output reveal">文档解析 Agent</div>
+          <div class="output reveal">招聘分析 Agent / 合同分析 Agent</div>
+          <div class="output reveal">评分判断 Agent / 风险判断 Agent</div>
+          <div class="output reveal">结果解释 Agent</div>
+          <div class="output reveal">人工复核节点</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="workflow">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Workflow</div>
+            <h2 class="section-title">多 Agent 工作流</h2>
+          </div>
+        </div>
+        <div class="process-grid">
+          <article class="process-card reveal">
+            <h3>招聘数字人工作流</h3>
+            <div class="process-steps">
+              <div class="process-step"><b>01</b><span>HR 输入岗位需求</span></div>
+              <div class="process-step"><b>02</b><span>任务接收 Agent</span></div>
+              <div class="process-step"><b>03</b><span>文档解析 Agent</span></div>
+              <div class="process-step"><b>04</b><span>招聘分析 Agent</span></div>
+              <div class="process-step"><b>05</b><span>评分判断 Agent</span></div>
+              <div class="process-step"><b>06</b><span>结果解释 Agent</span></div>
+              <div class="process-step"><b>07</b><span>人工复核</span></div>
+              <div class="process-step"><b>08</b><span>输出候选人结论</span></div>
+            </div>
+          </article>
+          <article class="process-card reveal">
+            <h3>合同审查数字人工作流</h3>
+            <div class="process-steps">
+              <div class="process-step"><b>01</b><span>上传我方合同 + 对方签回合同</span></div>
+              <div class="process-step"><b>02</b><span>任务接收 Agent</span></div>
+              <div class="process-step"><b>03</b><span>文档解析 Agent</span></div>
+              <div class="process-step"><b>04</b><span>合同分析 Agent</span></div>
+              <div class="process-step"><b>05</b><span>风险判断 Agent</span></div>
+              <div class="process-step"><b>06</b><span>结果解释 Agent</span></div>
+              <div class="process-step"><b>07</b><span>人工复核</span></div>
+              <div class="process-step"><b>08</b><span>输出差异与风险结果</span></div>
+            </div>
+          </article>
+          <article class="process-card reveal">
+            <h3>招聘流程确认步骤优化</h3>
+            <div class="flow">
+              <span class="node">岗位录入</span><span class="arrow">→</span>
+              <span class="node">简历解析</span><span class="arrow">→</span>
+              <span class="node">AI 初评</span><span class="arrow">→</span>
+              <span class="node">人工复核</span><span class="arrow">→</span>
+              <span class="node">二次确认</span>
+            </div>
+            <div class="flow">
+              <span class="node after">AI 评分</span><span class="arrow">→</span>
+              <span class="node after">人工确认</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Recruiting Agent</div>
+            <h2 class="section-title">招聘数字人</h2>
+          </div>
+        </div>
+        <div class="split-grid">
+          <article class="panel reveal">
+            <h3>输入内容</h3>
+            <ul class="list">
+              <li>岗位名称</li>
+              <li>岗位职责</li>
+              <li>任职要求</li>
+              <li>学历要求</li>
+              <li>经验要求</li>
+              <li>核心技能要求</li>
+              <li>加分项 / 风险项</li>
+            </ul>
+          </article>
+          <article class="panel reveal">
+            <h3>输出内容</h3>
+            <ul class="list">
+              <li>候选人匹配分</li>
+              <li>匹配理由</li>
+              <li>关键亮点</li>
+              <li>风险提示</li>
+              <li>推荐结论</li>
+              <li>面试建议</li>
+            </ul>
+          </article>
+        </div>
+        <div class="table-wrap reveal" style="margin-top:16px;">
+          <table>
+            <thead>
+              <tr>
+                <th>评分维度</th>
+                <th>权重</th>
+                <th>产品说明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>岗位硬性条件匹配</td><td>25%</td><td>学历、经验年限、基础门槛是否满足。</td></tr>
+              <tr><td>核心技能匹配</td><td>25%</td><td>候选人技能与岗位关键要求的对应关系。</td></tr>
+              <tr><td>项目 / 行业相关性</td><td>20%</td><td>过往项目或行业经验是否能支撑岗位需求。</td></tr>
+              <tr><td>经验年限匹配</td><td>15%</td><td>候选人经验年限与岗位级别是否匹配。</td></tr>
+              <tr><td>风险因素</td><td>15%</td><td>识别频繁跳槽、能力断层、信息缺失等风险。</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Contract Review Agent</div>
+            <h2 class="section-title">合同审查数字人</h2>
+          </div>
+        </div>
+        <div class="split-grid">
+          <article class="panel reveal">
+            <h3>输入内容</h3>
+            <ul class="list">
+              <li>我方发给对方公司的合同</li>
+              <li>对方签字返回的合同版本</li>
+            </ul>
+          </article>
+          <article class="panel reveal">
+            <h3>输出内容</h3>
+            <ul class="list">
+              <li>差异条款</li>
+              <li>差异类型</li>
+              <li>风险等级</li>
+              <li>风险说明</li>
+              <li>修改建议</li>
+              <li>原文定位</li>
+            </ul>
+          </article>
+        </div>
+        <div class="mode-grid" style="margin-top:16px;">
+          <div class="mini reveal"><strong>逐字对比</strong><span>识别文本层面的新增、删除、替换内容。</span></div>
+          <div class="mini reveal"><strong>实质差异</strong><span>识别条款含义、责任归属、金额、期限、付款条件等是否发生变化。</span></div>
+          <div class="mini reveal"><strong>重大权益</strong><span>重点识别涉及违约责任、付款义务、期限、权利限制、责任转移等高风险变化。</span></div>
+        </div>
+        <div class="table-wrap reveal" style="margin-top:16px;">
+          <table>
+            <thead>
+              <tr>
+                <th>风险等级</th>
+                <th>规则说明</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>高风险</td><td>金额、付款条件、违约责任、责任归属、合同期限等关键权益变化。</td></tr>
+              <tr><td>中风险</td><td>履约方式、交付节点、验收标准、条款表达变化但会影响执行理解。</td></tr>
+              <tr><td>低风险</td><td>措辞、格式、非关键描述调整。</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="section-note" style="margin-top:14px;">在测试样例中支持识别 40+ 处条款差异。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Artifacts</div>
+            <h2 class="section-title">核心产出物</h2>
+          </div>
+        </div>
+        <div class="case-nav-grid">
+          <a class="case-nav-card reveal" href="#prd"><strong>PRD 节选</strong><span>目标用户、功能边界、异常状态、验收标准</span></a>
+          <a class="case-nav-card reveal" href="#workflow"><strong>Agent Workflow 流程图</strong><span>节点职责与人工复核入口</span></a>
+          <a class="case-nav-card reveal" href="#prompt"><strong>Prompt 规范</strong><span>输入字段、输出结构、风险表达</span></a>
+          <a class="case-nav-card reveal" href="#prototype"><strong>Figma 原型说明</strong><span>页面结构、状态流转、确认路径</span></a>
+          <a class="case-nav-card reveal" href="#acceptance"><strong>验收标准</strong><span>识别准确性、字段完整性、导出可用性</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prd">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">PRD</div>
+            <h2 class="section-title">PRD 节选</h2>
+            <p class="section-note">以下为公开展示版，用于说明我如何把场景需求拆成可实现、可验收的产品条目。</p>
+          </div>
+        </div>
+        <div class="rule-grid">
+          <div class="mini reveal"><strong>目标用户</strong><span>HR、合同审核人员，以及需要在企微工作区内完成复核的业务人员。</span></div>
+          <div class="mini reveal"><strong>使用场景</strong><span>招聘筛选、候选人匹配评估、合同版本比对、条款风险识别。</span></div>
+          <div class="mini reveal"><strong>核心功能</strong><span>任务创建、文档解析、AI 分析、结果解释、人工确认、结果导出。</span></div>
+          <div class="mini reveal"><strong>输入 / 输出</strong><span>输入岗位需求、候选人信息、合同版本；输出评分、理由、风险等级和建议。</span></div>
+          <div class="mini reveal"><strong>异常状态</strong><span>文档解析失败、字段缺失、合同版本不匹配、AI 结果置信不足。</span></div>
+          <div class="mini reveal"><strong>验收目标</strong><span>字段完整、结论可解释、人工可确认、结果可导出。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prompt">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Prompt</div>
+            <h2 class="section-title">Prompt 规范</h2>
+          </div>
+        </div>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>数字人</th>
+                <th>输入字段</th>
+                <th>输出字段</th>
+                <th>输出要求</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>招聘数字人</td>
+                <td>岗位需求、候选人信息</td>
+                <td>匹配分、理由、亮点、风险、建议</td>
+                <td>结构化、可解释、避免模糊结论</td>
+              </tr>
+              <tr>
+                <td>合同审查数字人</td>
+                <td>原合同、签回合同、审查模式</td>
+                <td>差异点、风险等级、说明、建议、原文位置</td>
+                <td>分级明确、差异可定位、表达克制</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="prototype">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Prototype</div>
+            <h2 class="section-title">Figma 原型 / 高保真原型预览</h2>
+            <p class="section-note">由于招聘与合同审查场景均为高判断成本流程，原型重点展示 AI 如何完成信息结构化、结果解释、人工复核和下一步动作推进。</p>
+          </div>
+        </div>
+        <div class="prototype-preview-grid">
+          <article class="prototype-preview-card reveal">
+            <img src="assets/openclaw/figma-workflow-overview.png" alt="双场景 Agent Workflow 原型截图">
+            <div class="prototype-preview-body">
+              <h3>双场景 Agent Workflow</h3>
+              <p>用双泳道展示招聘与合同审查如何从输入、AI 分析、人工复核推进到下一步动作。</p>
+            </div>
+          </article>
+          <article class="prototype-preview-card reveal">
+            <img src="assets/openclaw/figma-recruit-clarify.png" alt="招聘岗位需求澄清原型截图">
+            <div class="prototype-preview-body">
+              <h3>招聘岗位需求澄清</h3>
+              <p>把 HR 的模糊自然语言需求拆解为薪资、技术栈、值班要求等可确认字段。</p>
+            </div>
+          </article>
+          <article class="prototype-preview-card reveal">
+            <img src="assets/openclaw/figma-recruit-result.png" alt="候选人筛选结果原型截图">
+            <div class="prototype-preview-body">
+              <h3>候选人筛选结果</h3>
+              <p>展示 127 份简历筛选后的候选人匹配分、匹配亮点、邀约状态和面试协调入口。</p>
+            </div>
+          </article>
+          <article class="prototype-preview-card reveal">
+            <img src="assets/openclaw/figma-contract-upload.png" alt="合同上传与对比设置原型截图">
+            <div class="prototype-preview-body">
+              <h3>合同上传与对比设置</h3>
+              <p>通过原合同、回签版、对比模式和精度参数，明确合同审查任务的输入结构。</p>
+            </div>
+          </article>
+          <article class="prototype-preview-card reveal">
+            <img src="assets/openclaw/figma-contract-summary.png" alt="合同风险总览原型截图">
+            <div class="prototype-preview-body">
+              <h3>合同风险总览</h3>
+              <p>将差异总数、高中低风险和总体评估聚合成法务可快速判断的结果页。</p>
+            </div>
+          </article>
+          <article class="prototype-preview-card reveal">
+            <img src="assets/openclaw/figma-contract-diff-detail.png" alt="差异明细与风险说明原型截图">
+            <div class="prototype-preview-body">
+              <h3>差异明细与风险说明</h3>
+              <p>用原合同、回签版、影响说明三栏对照，支持人工复核和后续法务沟通。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="acceptance">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Acceptance</div>
+            <h2 class="section-title">验收标准</h2>
+          </div>
+        </div>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>模块</th>
+                <th>验收标准</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>招聘数字人</td><td>支持岗位需求输入、评分结果输出、人工确认。</td></tr>
+              <tr><td>合同审查数字人</td><td>支持差异识别、风险分级、结果导出。</td></tr>
+              <tr><td>输出结构</td><td>字段完整、结果可解释。</td></tr>
+              <tr><td>人工复核</td><td>可查看 AI 结论并确认 / 调整。</td></tr>
+              <tr><td>页面交互</td><td>状态清晰、结果区分明晰。</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Impact</div>
+            <h2 class="section-title">关键成果</h2>
+          </div>
+        </div>
+        <div class="metric-strip reveal">
+          <div class="metric"><strong>5 → 2</strong><span>招聘流程人工确认步骤由 5 步简化为 2 步</span></div>
+          <div class="metric"><strong>40+</strong><span>合同审查支持 40+ 条款差异识别</span></div>
+          <div class="metric"><strong>高 / 中 / 低</strong><span>支持风险分级展示</span></div>
+        </div>
+        <div class="panel reveal" style="margin-top:16px;">
+          <ul class="list">
+            <li>沉淀 PRD、流程图、Prompt 规范和验收标准。</li>
+            <li>将招聘与合同审查两个子场景接入多 Agent 协作流程。</li>
+            <li>把 AI 输出从单次文本结果整理为可复核、可确认、可导出的结构化结果。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Review</div>
+            <h2 class="section-title">项目复盘</h2>
+          </div>
+        </div>
+        <div class="panel reveal">
+          <p>这个项目让我更明确地意识到：AI 产品不是把模型接进去就结束了，真正关键的是如何把模型输出变成用户能理解、能复核、能继续决策的结构化结果。在招聘和合同审查这类高判断成本场景里，流程设计、字段设计、结果解释和人工确认链路，往往比“是否用了模型”本身更重要。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Materials</div>
+            <h2 class="section-title">作品材料预览</h2>
+          </div>
+        </div>
+        <div class="case-nav-grid">
+          <a class="case-nav-card reveal" href="#prd"><strong>PRD 节选</strong><span>查看公开版 PRD 模块拆解</span></a>
+          <a class="case-nav-card reveal" href="#workflow"><strong>Agent Workflow</strong><span>查看两个子场景工作流</span></a>
+          <a class="case-nav-card reveal" href="#prompt"><strong>Prompt 规范</strong><span>查看输入输出字段要求</span></a>
+          <a class="case-nav-card reveal" href="#prototype"><strong>Figma 原型</strong><span>查看工作区页面 mockup</span></a>
+          <a class="case-nav-card reveal" href="#recruit-demo-video"><strong>招聘数字人演示视频</strong><span>查看招聘 Agent 的真实流程演示</span></a>
+          <a class="case-nav-card reveal" href="#recruit-demo-screenshots"><strong>真实演示流程截图</strong><span>查看企微 AI 工作区交互链路</span></a>
+          <a class="case-nav-card reveal" href="#acceptance"><strong>验收标准</strong><span>查看测试与验收口径</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-box">
+        <div>
+          <div class="eyebrow">Contact</div>
+          <h2>欢迎进一步沟通项目细节</h2>
+        </div>
+        <div class="contact-links">
+          <div><a href="mailto:1733076900@qq.com">1733076900@qq.com</a></div>
+          <div><a href="tel:13683424240">136-8342-4240</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
+

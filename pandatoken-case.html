@@ -1,0 +1,376 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PandaToken｜案例拆解</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">容莹<span>｜AI 产品经理作品集</span></a>
+      <nav class="nav-links" aria-label="案例导航">
+        <a href="index.html#cases">案例</a>
+        <a href="#outputs">产出</a>
+        <a href="#real-screenshots">截图</a>
+        <a href="#report-preview">报告</a>
+        <a href="#scoring">评分体系</a>
+        <a href="#contact">联系</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="case-hero">
+      <div class="wrap">
+        <a class="back" href="index.html">← 返回首页</a>
+        <div class="eyebrow">Case 02</div>
+        <h1>PandaToken 大模型测试工具：模型 API 质量评测与接入决策系统</h1>
+        <p class="lead">面向 AI 模型 API 聚合平台，设计并落地一套真实测试工具，把模型 API 调用质量、协议兼容性、异常归因和接入建议转化为可比较的测试报告。</p>
+        <div class="metric-strip reveal">
+          <div class="metric">
+            <strong>20+</strong>
+            <span>API 平台评测覆盖</span>
+          </div>
+          <div class="metric">
+            <strong>15+</strong>
+            <span>不达标渠道淘汰</span>
+          </div>
+          <div class="metric">
+            <strong>约 90%</strong>
+            <span>接入故障率下降</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="outputs">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Outputs</div>
+            <h2 class="section-title">实际产出总览</h2>
+            <p class="section-note">项目二不是单纯原型展示，而是一套真实测试工具 + 测试报告 + 接入决策系统。</p>
+          </div>
+        </div>
+        <div class="rule-grid">
+          <div class="mini reveal"><strong>测试配置能力</strong><span>支持配置平台、模型、API 地址、Key、测试模块和测试参数。</span></div>
+          <div class="mini reveal"><strong>测试执行能力</strong><span>支持速度 / 稳定性、并发测试、Token 统计、缓存检测、协议兼容等模块。</span></div>
+          <div class="mini reveal"><strong>综合评分报告</strong><span>自动输出综合评分、排名、等级、结论可信度和核心指标。</span></div>
+          <div class="mini reveal"><strong>详细指标分析</strong><span>输出 TTFT、CPS、TPS / TPOT、并发容量、错误与恢复等细项数据。</span></div>
+          <div class="mini reveal"><strong>协议兼容性检查</strong><span>检测 OpenAI / Anthropic 协议兼容、错误响应格式、流式输出和工具调用。</span></div>
+          <div class="mini reveal"><strong>接入建议输出</strong><span>根据评分和风险点输出接入建议、复测建议和适用场景判断。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="real-screenshots">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Real Screenshots</div>
+            <h2 class="section-title">真实测试工具截图</h2>
+            <p class="section-note">以下截图来自大模型渠道测试工具的真实测试流程，展示了从平台配置、模型选择、测试参数设置，到综合评分、详细指标、协议兼容性检查和接入建议输出的完整链路。截图内容已按作品集展示场景做脱敏处理。</p>
+          </div>
+        </div>
+        <div class="real-screenshot-grid">
+          <a class="real-screenshot-card reveal" href="assets/pandatoken/real-test-config.png" target="_blank" rel="noreferrer">
+            <img src="assets/pandatoken/real-test-config.png" alt="测试配置页截图">
+            <div class="real-screenshot-body">
+              <h3>测试配置页</h3>
+              <p>支持平台配置、Base URL、API Key、模型选择、测试参数和测试模块勾选，覆盖速度 / 稳定性、并发测试、Token 统计和缓存检测等模块。</p>
+            </div>
+          </a>
+          <a class="real-screenshot-card reveal" href="assets/pandatoken/real-score-summary.png" target="_blank" rel="noreferrer">
+            <img src="assets/pandatoken/real-score-summary.png" alt="综合评分总览截图">
+            <div class="real-screenshot-body">
+              <h3>综合评分总览</h3>
+              <p>自动输出综合评分、等级、排名、结论可信度、运行可靠性分、协议分、TTFT、CPS 和成功率等核心指标。</p>
+            </div>
+          </a>
+          <a class="real-screenshot-card reveal" href="assets/pandatoken/real-scenario-conclusion.png" target="_blank" rel="noreferrer">
+            <img src="assets/pandatoken/real-scenario-conclusion.png" alt="场景结论与接入建议截图">
+            <div class="real-screenshot-body">
+              <h3>场景结论与接入建议</h3>
+              <p>将测试结果按聊天体验、Agent、批量任务、企业接入等场景进行归纳，并输出适用场景、不适用场景和复测建议。</p>
+            </div>
+          </a>
+          <a class="real-screenshot-card reveal" href="assets/pandatoken/real-metrics-detail.png" target="_blank" rel="noreferrer">
+            <img src="assets/pandatoken/real-metrics-detail.png" alt="详细指标数据截图">
+            <div class="real-screenshot-body">
+              <h3>详细指标数据</h3>
+              <p>展示 TPS / TPOT、并发容量、错误与恢复等细项数据，用于判断渠道在高并发和异常情况下的稳定性。</p>
+            </div>
+          </a>
+          <a class="real-screenshot-card reveal" href="assets/pandatoken/real-protocol-check.png" target="_blank" rel="noreferrer">
+            <img src="assets/pandatoken/real-protocol-check.png" alt="协议兼容性检查截图">
+            <div class="real-screenshot-body">
+              <h3>协议兼容性检查</h3>
+              <p>检查 OpenAI / Anthropic 协议兼容性、错误响应格式、流式输出和工具调用能力，辅助判断接入改造成本。</p>
+            </div>
+          </a>
+          <a class="real-screenshot-card reveal" href="assets/pandatoken/real-access-suggestion.png" target="_blank" rel="noreferrer">
+            <img src="assets/pandatoken/real-access-suggestion.png" alt="平台接入建议截图">
+            <div class="real-screenshot-body">
+              <h3>平台接入建议</h3>
+              <p>基于综合协议分、兼容层分值和主要风险点，输出平台接入建议、模型维度结论和后续处理动作。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Product Value</div>
+            <h2 class="section-title">从测试脚本到接入决策系统</h2>
+            <p class="section-note">该工具的核心价值不只是调用模型 API，而是把测试过程沉淀为标准化评测流程。通过配置化测试、指标采集、评分计算、异常归因和接入建议输出，帮助团队在接入前识别渠道风险，减少上线后的协议不兼容、限流异常、Token 统计缺失和模型身份不一致等问题。</p>
+          </div>
+        </div>
+        <div class="value-summary-grid">
+          <div class="value-summary-card reveal"><strong>配置化测试</strong><span>支持多平台、多模型组合测试，减少重复手动配置。</span></div>
+          <div class="value-summary-card reveal"><strong>指标标准化</strong><span>统一采集 TTFT、CPS、成功率、并发能力、Token 返回等指标。</span></div>
+          <div class="value-summary-card reveal"><strong>异常可归因</strong><span>将失败原因归类到限流、协议、Token、模型身份、错误格式等问题。</span></div>
+          <div class="value-summary-card reveal"><strong>结果可比较</strong><span>不同渠道使用统一评分口径，便于横向比较。</span></div>
+          <div class="value-summary-card reveal"><strong>建议可落地</strong><span>最终输出推荐接入、持续监控、谨慎接入或不建议接入。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="report-preview">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Report Preview</div>
+            <h2 class="section-title">测试报告 / 高保真原型预览</h2>
+            <p class="section-note">报告页重点承接真实测试数据，把技术指标转化为综合评分、场景结论、协议风险和接入建议，方便团队做接入决策。</p>
+          </div>
+        </div>
+        <div class="prototype-preview-grid">
+          <article class="prototype-preview-card reveal">
+            <img src="assets/pandatoken/real-score-summary.png" alt="测试报告综合评分预览">
+            <div class="prototype-preview-body">
+              <h3>综合评分报告</h3>
+              <p>把渠道表现汇总为评分、等级、排名和关键指标，让不同平台可以横向比较。</p>
+            </div>
+          </article>
+          <article class="prototype-preview-card reveal">
+            <img src="assets/pandatoken/real-protocol-check.png" alt="协议兼容性报告预览">
+            <div class="prototype-preview-body">
+              <h3>协议兼容报告</h3>
+              <p>对 OpenAI / Anthropic 协议、流式输出、工具调用和错误响应格式进行逐项检查。</p>
+            </div>
+          </article>
+          <article class="prototype-preview-card reveal">
+            <img src="assets/pandatoken/real-access-suggestion.png" alt="平台接入建议预览">
+            <div class="prototype-preview-body">
+              <h3>接入建议输出</h3>
+              <p>基于风险点给出接入建议、复测建议和适用场景判断，让报告结果能进入决策流程。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap detail-grid">
+        <article class="panel reveal">
+          <h3>项目背景</h3>
+          <p>PandaToken 是 AI 模型 API 聚合平台，需要对不同平台和模型渠道进行质量评估。原有测试方式依赖人工请求和单点记录，难以横向对比，也无法快速判断渠道是否适合接入。</p>
+        </article>
+        <article class="panel reveal">
+          <h3>我的角色</h3>
+          <ul class="list">
+            <li>测试场景拆解与指标体系设计</li>
+            <li>评分规则设计与异常问题归因</li>
+            <li>测试报告结构设计</li>
+            <li>接入建议输出</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Contribution</div>
+            <h2 class="section-title">我具体做了什么</h2>
+          </div>
+        </div>
+        <div class="panel reveal">
+          <ul class="list">
+            <li>拆解模型 API 渠道测试场景，形成速度、并发、Token、协议、限流、异常等测试模块。</li>
+            <li>围绕 TTFT、CPS、成功率、错误率等指标设计评分逻辑。</li>
+            <li>将原始请求结果转化为综合评分、风险等级和接入建议。</li>
+            <li>设计 HTML 测试报告结构，方便团队横向比较渠道质量。</li>
+            <li>根据测试结果辅助识别不稳定渠道和协议兼容问题。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Problem</div>
+            <h2 class="section-title">核心问题</h2>
+          </div>
+        </div>
+        <div class="detail-grid">
+          <div class="mini reveal"><strong>渠道差异大</strong><span>不同渠道在速度、稳定性、限流策略上的表现不一致。</span></div>
+          <div class="mini reveal"><strong>缺少统一评分</strong><span>测试结果难以沉淀成可比较、可复用的判断标准。</span></div>
+          <div class="mini reveal"><strong>人工成本高</strong><span>人工测试难以形成标准化报告，也不利于复盘。</span></div>
+          <div class="mini reveal"><strong>上线风险高</strong><span>接入前缺少系统验证，容易在上线后暴露故障。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Solution</div>
+            <h2 class="section-title">9 类测试模块</h2>
+          </div>
+        </div>
+        <div class="rule-grid">
+          <div class="mini reveal"><strong>速度测试</strong><span>评估首字返回和持续生成速度。</span></div>
+          <div class="mini reveal"><strong>并发测试</strong><span>观察多请求下的稳定性。</span></div>
+          <div class="mini reveal"><strong>Token 统计</strong><span>检查输入输出 Token 返回是否正常。</span></div>
+          <div class="mini reveal"><strong>缓存检测</strong><span>识别渠道是否存在异常缓存。</span></div>
+          <div class="mini reveal"><strong>协议兼容性</strong><span>判断是否符合 OpenAI API 格式。</span></div>
+          <div class="mini reveal"><strong>限流恢复</strong><span>观察限流后的恢复能力。</span></div>
+          <div class="mini reveal"><strong>错误处理</strong><span>记录异常类型与返回内容。</span></div>
+          <div class="mini reveal"><strong>模型身份一致性</strong><span>检查返回模型是否与请求一致。</span></div>
+          <div class="mini reveal"><strong>报告生成</strong><span>输出 HTML 测试报告和接入建议。</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="scoring">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Scoring</div>
+            <h2 class="section-title">评分体系</h2>
+            <p class="section-note">指标不是为了“跑分”，而是为了把技术表现转译成产品接入判断。</p>
+          </div>
+        </div>
+        <div class="table-wrap reveal">
+          <table>
+            <thead>
+              <tr>
+                <th>指标</th>
+                <th>含义</th>
+                <th>产品判断价值</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>TTFT</td><td>首字返回时间</td><td>判断用户等待体感</td></tr>
+              <tr><td>CPS</td><td>每秒生成字符数</td><td>判断模型输出速度</td></tr>
+              <tr><td>成功率</td><td>请求成功占比</td><td>判断渠道稳定性</td></tr>
+              <tr><td>错误率</td><td>异常请求占比</td><td>判断接入风险</td></tr>
+              <tr><td>并发表现</td><td>多请求下的稳定性</td><td>判断高峰场景可用性</td></tr>
+              <tr><td>协议兼容性</td><td>是否符合 OpenAI API 格式</td><td>判断接入改造成本</td></tr>
+              <tr><td>限流恢复</td><td>限流后的恢复能力</td><td>判断持续调用风险</td></tr>
+              <tr><td>Token 统计</td><td>输入输出 Token 是否正常返回</td><td>判断计费和成本可观测性</td></tr>
+              <tr><td>模型身份一致性</td><td>返回模型是否与请求一致</td><td>判断渠道透明度</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap detail-grid">
+        <article class="panel reveal">
+          <h3>等级规则</h3>
+          <ul class="list">
+            <li>A：85-100，推荐接入。</li>
+            <li>B：70-84，可接入，需持续监控。</li>
+            <li>C：60-69，谨慎接入。</li>
+            <li>D：60 以下，不建议接入。</li>
+          </ul>
+        </article>
+        <article class="panel reveal" id="report">
+          <h3>测试报告结构</h3>
+          <ul class="list">
+            <li>综合评分与风险等级</li>
+            <li>TTFT / CPS / 成功率</li>
+            <li>五维能力雷达图</li>
+            <li>异常原因与接入建议</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap detail-grid">
+        <article class="panel reveal">
+          <h3>关键成果</h3>
+          <ul class="list">
+            <li>支持配置化管理 10+ 平台、10+ 模型。</li>
+            <li>评测覆盖 20+ API 平台。</li>
+            <li>淘汰 15+ 不达标渠道。</li>
+            <li>接入故障率下降约 90%。</li>
+            <li>输出自动化 HTML 测试报告，降低人工横向对比成本。</li>
+          </ul>
+        </article>
+        <article class="panel reveal">
+          <h3>项目复盘</h3>
+          <p>模型评测不是单纯跑接口，而是把技术指标转化成产品接入决策。这个项目让我更重视指标定义、异常归因和报告表达之间的一致性。</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Materials</div>
+            <h2 class="section-title">作品材料预览</h2>
+          </div>
+        </div>
+        <div class="case-nav-grid">
+          <a class="case-nav-card reveal" href="#outputs"><strong>实际产出总览</strong><span>查看测试配置、执行、评分、协议和接入建议能力</span></a>
+          <a class="case-nav-card reveal" href="#real-screenshots"><strong>真实测试工具截图</strong><span>查看工具从配置到接入建议的真实流程</span></a>
+          <a class="case-nav-card reveal" href="#report-preview"><strong>测试报告预览</strong><span>查看综合评分、协议兼容和接入建议报告</span></a>
+          <a class="case-nav-card reveal" href="#scoring"><strong>评分体系</strong><span>查看指标定义与产品判断价值</span></a>
+          <a class="case-nav-card reveal" href="#report"><strong>测试报告结构</strong><span>查看报告字段和输出逻辑</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-box">
+        <div>
+          <div class="eyebrow">Contact</div>
+          <h2>欢迎进一步沟通项目细节</h2>
+        </div>
+        <div class="contact-links">
+          <div><a href="mailto:1733076900@qq.com">1733076900@qq.com</a></div>
+          <div><a href="tel:13683424240">136-8342-4240</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14 });
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
+
