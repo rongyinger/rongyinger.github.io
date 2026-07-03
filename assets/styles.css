@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -27,10 +28,30 @@ body {
   font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 a {
   color: inherit;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+li,
+span,
+strong,
+a,
+h1,
+h2,
+h3,
+td,
+th {
+  overflow-wrap: anywhere;
 }
 
 a:focus-visible,
@@ -74,6 +95,7 @@ code {
 }
 
 .brand {
+  flex: 0 0 auto;
   font-weight: 700;
   letter-spacing: 0;
   text-decoration: none;
@@ -88,11 +110,13 @@ code {
   align-items: center;
   gap: 18px;
   flex-wrap: wrap;
+  min-width: 0;
   font-size: 13px;
   color: var(--ink-soft);
 }
 
 .nav-links a {
+  flex: 0 0 auto;
   text-decoration: none;
   border-bottom: 1px solid transparent;
 }
@@ -176,6 +200,7 @@ h1 {
   font-size: 13px;
   font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
   transition: background 0.2s, color 0.2s, border-color 0.2s;
+  text-align: center;
 }
 
 .btn.primary {
@@ -901,9 +926,11 @@ h1 {
 
 .table-wrap {
   overflow-x: auto;
+  max-width: 100%;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--paper-alt);
+  -webkit-overflow-scrolling: touch;
 }
 
 table {
@@ -1038,14 +1065,59 @@ tr:last-child td {
   transform: translateY(0);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 900px) {
   .nav-inner {
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    padding: 13px 24px;
+  }
+
+  .brand {
+    max-width: 100%;
+  }
+
+  .nav-links {
+    flex: 1 1 100%;
+    flex-wrap: nowrap;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    white-space: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links a {
+    min-height: 34px;
+    padding: 6px 10px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: rgba(251, 252, 248, 0.64);
+  }
+
+  .hero {
+    padding: 70px 0 46px;
+  }
+
+  .case-hero {
+    padding: 42px 0 28px;
+  }
+
+  .section {
+    padding: 48px 0;
   }
 
   .case-grid,
   .artifact-grid,
+  .real-knowledge-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .about-grid,
   .detail-grid,
   .report-grid,
@@ -1054,50 +1126,105 @@ tr:last-child td {
   .case-nav-grid,
   .split-grid,
   .mode-grid,
-  .mockup-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .prototype-preview-grid {
-    grid-template-columns: 1fr;
-  }
-
+  .mockup-grid,
   .video-demo-grid,
+  .prototype-preview-grid,
   .demo-gallery,
   .real-screenshot-grid,
-  .real-knowledge-grid,
-  .value-summary-grid,
+  .real-knowledge-grid.two-col,
   .picker-option-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
+  .value-summary-grid,
   .output-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .video-insight-card {
+    order: 2;
+  }
+
+  .video-card {
+    order: 1;
   }
 
   .process-steps {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .process-card,
+  .panel,
+  .card,
+  .artifact-card,
+  .mini,
+  .value-summary-card,
+  .case-nav-card {
+    min-width: 0;
+  }
 }
 
 @media (max-width: 640px) {
   .wrap {
-    padding: 0 18px;
+    padding: 0 16px;
+  }
+
+  .nav-inner {
+    padding: 11px 16px;
   }
 
   .hero {
-    padding-top: 58px;
+    padding: 48px 0 36px;
+  }
+
+  .case-hero {
+    padding: 34px 0 24px;
+  }
+
+  h1,
+  .case-hero h1 {
+    max-width: none;
+    font-size: 32px;
+  }
+
+  .lead {
+    font-size: 15.5px;
+    line-height: 1.75;
+  }
+
+  .hero-actions,
+  .action-row {
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 14px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .section-title,
+  .contact h2 {
+    font-size: 24px;
   }
 
   .nav-links {
-    gap: 10px 14px;
+    gap: 8px;
+    font-size: 12.5px;
   }
 
   .metric-strip {
     grid-template-columns: 1fr;
+    margin-top: 30px;
   }
 
   .metric {
+    padding: 16px 18px;
     border-right: 0;
     border-bottom: 1px solid var(--line);
   }
@@ -1110,20 +1237,148 @@ tr:last-child td {
     display: block;
   }
 
-  .card {
-    min-height: auto;
+  .case-grid,
+  .artifact-grid,
+  .real-knowledge-grid,
+  .value-summary-grid,
+  .output-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .output-grid {
-    grid-template-columns: 1fr;
+  .card {
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .panel,
+  .process-card,
+  .video-insight-card,
+  .real-screenshot-body,
+  .real-knowledge-body,
+  .prototype-preview-body,
+  .demo-card-body {
+    padding: 18px;
+  }
+
+  .real-screenshot-grid,
+  .real-knowledge-grid,
+  .demo-gallery,
+  .prototype-preview-grid {
+    gap: 14px;
+  }
+
+  .prototype-preview-card img,
+  .demo-card img,
+  .real-screenshot-card img,
+  .real-knowledge-card img,
+  .real-picker-card img {
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+
+  .case-video {
+    width: 100%;
+    height: auto;
   }
 
   .process-steps {
     grid-template-columns: 1fr;
   }
 
+  .flow {
+    align-items: stretch;
+  }
+
+  .node {
+    white-space: normal;
+  }
+
+  .arrow {
+    display: none;
+  }
+
   .mockup-frame {
     grid-template-columns: 72px 1fr;
+  }
+
+  .table-wrap {
+    margin-left: -1px;
+    margin-right: -1px;
+  }
+
+  table {
+    min-width: 640px;
+  }
+
+  th,
+  td {
+    padding: 11px 12px;
+    font-size: 13px;
+  }
+
+  .contact-box {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 420px) {
+  .wrap {
+    padding: 0 14px;
+  }
+
+  .nav-inner {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .brand {
+    font-size: 14px;
+  }
+
+  .brand span {
+    display: block;
+    margin-top: 2px;
+  }
+
+  h1,
+  .case-hero h1 {
+    font-size: 30px;
+  }
+
+  .lead {
+    font-size: 15px;
+  }
+
+  .metric strong {
+    font-size: 23px;
+  }
+
+  .panel,
+  .card,
+  .process-card,
+  .video-card,
+  .video-insight-card,
+  .mini,
+  .value-summary-card {
+    padding: 16px;
+  }
+
+  .video-card {
+    padding: 10px;
+  }
+
+  .tags,
+  .picker-option-tags {
+    gap: 7px;
+  }
+
+  .tag,
+  .picker-option-tag {
+    max-width: 100%;
+  }
+
+  table {
+    min-width: 600px;
   }
 }
 
